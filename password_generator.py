@@ -23,4 +23,4 @@ password = "".join(random_user_password_input)
 print(f"Your password is: {password}")
 
 
-use this link to create your password: https://replit.com/@lydiecherilus/passwordgenerator?v=1
+# use this link to create your password: https://replit.com/@lydiecherilus/passwordgenerator?v=1

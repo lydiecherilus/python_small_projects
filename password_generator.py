@@ -4,10 +4,18 @@ the password length depends on the user's input'''
 import random
 import string
 
+# to check input validity
+is_input_valid = False
+
 # ask for user input
-number_of_letters= int(input("How many letters do you want in your password?\n"))
-number_of_numbers= int(input("How many numbers do you want in your password?\n"))
-number_of_symbols= int(input("How many symbols do you want in your password?\n"))    
+while not is_input_valid: # loop until the user enters a valid integer
+    try:
+        number_of_letters = int((input("How many letters do you want in your password?\n")))
+        number_of_numbers = int((input("How many numbers do you want in your password?\n")))
+        number_of_symbols = int((input("How many symbols do you want in your password?\n")))
+        is_input_valid = True # if this point is reached, valid integers were entered for all 3 inputs
+    except ValueError:
+        print("Please only input digits")  
 
 # generate the letters, numbers and symbols
 random_letters = random.sample(string.ascii_letters, number_of_letters ) # generate random letters

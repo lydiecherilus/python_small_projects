@@ -11,6 +11,11 @@ user_bet = screen.textinput(title="Bet: red, black, green, blue, purple \n", pro
 
 if user_bet != "red" or user_bet != "black" or user_bet != "green" or user_bet != "blue" or user_bet != "purple":
     user_bet = screen.textinput(title="Bet: red, black, green, blue, purple \n", prompt="Which turtle will win the race? Enter a color: ")
+    
+# turtles color and position
+turtles_colors = ["red", "black", "green", "blue", "purple"]
+y_positions = [-120, -60, 0, 60, 120]
+all_turtles = []
 
 
 screen.exitonclick()

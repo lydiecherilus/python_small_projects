@@ -6,6 +6,13 @@ screen = Screen()
 screen.setup(width=500, height=500)
 screen.title("Turtle Racing")
 
+# create game over functionality
+game_over = Turtle()
+game_over.hideturtle()
+game_over.penup()
+game_over.goto(-230, 140)
+game_over.color("deep pink")
+
 # take user bet
 user_bet = screen.textinput(title="Bet: red, black, green, blue, purple \n", prompt="Which turtle will win the race? Enter a color: ")
 

@@ -34,6 +34,19 @@ is_race_on = False
 if user_bet:
     is_race_on = True
 
-
+# start race
+while is_race_on:
+    for turtle in all_turtles:
+        # if a turtle crosses the finish line, the game is over
+        if turtle.xcor() > 220:
+            is_race_on = False
+            winning_color = turtle.pencolor()
+            if winning_color == user_bet:
+                game_over.write(f"You bet on {user_bet}.\nYou win! The {winning_color} turtle is the winner!", font=("Arial", 15, "bold"))
+            else:
+                game_over.write(f"You bet on {user_bet}.\nYou lost. The {winning_color} turtle is the winner!", font=("Arial", 15, "bold"))
+        random_distance = random.randint(0, 12)
+        turtle.forward(random_distance)
+        
 
 screen.exitonclick()

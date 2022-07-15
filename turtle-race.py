@@ -28,6 +28,12 @@ for turtle_index in range(0, 5):
     new_turtle.penup()
     new_turtle.goto(x=-230, y=y_positions[turtle_index])
     all_turtles.append(new_turtle)
+    
+is_race_on = False
+# check if user bet exists and set is_race_on to True
+if user_bet:
+    is_race_on = True
+
 
 
 screen.exitonclick()
